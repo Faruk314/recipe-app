@@ -1,38 +1,189 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+img {
+  width: 100%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
+/*Modal*/
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.95);
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.modal-img {
+  height: 40vh;
+}
+
+.modal-content {
+  background-color: white;
+  width: 50rem;
+  height: 80vh;
+  overflow: scroll;
+  overflow-x: hidden;
+}
+
+.modal-info {
+  padding: 1rem;
+}
+
+.modal-content h2 {
+  padding-bottom: 1rem;
+}
+
+.modal-content p {
+  padding-bottom: 1rem;
+}
+
+.modal-btn {
+  display: block;
+  cursor: pointer;
+  background-color: #efcd68;
+  padding: 0.5rem 2rem;
+  border: none;
+  border-radius: 1rem;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.modal-btn:hover {
+  opacity: 0.8;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/*Search form*/
+.form-container {
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.form-container form {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.form-container__input {
+  width: 20rem;
+  padding: 0.5rem;
+  border-radius: 1rem;
+}
+
+.form-container__searchBtn {
+  cursor: pointer;
+  background-color: #efcd68;
+  padding: 0.5rem 0.7rem;
+  border: none;
+  border-radius: 1rem;
+  color: white;
+}
+
+.form-container__searchBtn:hover {
+  opacity: 0.7;
+}
+
+.form-container__randomBtn {
+  cursor: pointer;
+  background-color: #efcd68;
+  padding: 0.5rem 0.7rem;
+  border: none;
+  border-radius: 1rem;
+  color: white;
+}
+
+.form-container__randomBtn:hover {
+  opacity: 0.7;
+}
+
+/*Favorites section*/
+.favorites-section {
+  width: 100%;
+  height: 15rem;
+  background-color: rgba(0, 0, 0, 0.35);
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  gap: 2rem;
+}
+
+.favorites-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.favorites-img {
+  width: 10rem;
+  border-radius: 20rem;
+  border: 5px solid white;
+}
+
+.favorites-closeBtn {
+  margin-top: 1rem;
+  cursor: pointer;
+  font-size: 1rem;
+  padding: 0.3rem 0.7rem;
+  border: none;
+  background-color: #efcd68;
+  color: white;
+  border-radius: 1rem;
+  transition: 0.2ms ease-in;
+}
+
+.favorites-closeBtn:hover {
+  opacity: 0.85;
+}
+
+/*Meals Section*/
+.meals-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem 0;
+}
+
+.meal-card {
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  border-radius: 0.5rem;
+  width: 20rem;
+}
+
+.meal-card__image {
+  border-radius: 0.5rem 0.5rem 0 0;
+  width: 100%;
+}
+
+.meal-card__content {
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.meal-card__btn {
+  cursor: pointer;
+  font-size: 1rem;
+  padding: 0.3rem 0.7rem;
+  border: none;
+  background-color: #efcd68;
+  color: white;
+  border-radius: 1rem;
+  transition: 0.2ms ease-in;
+}
+
+.meal-card__btn:hover {
+  opacity: 0.6;
 }
