@@ -14,6 +14,7 @@ const Favorites = () => {
               onClick={() => selectMeal(id)}
               className="favorites-img"
               src={image}
+              alt="food"
             />
             <button
               onClick={() => removeFromFavorites(id)}
