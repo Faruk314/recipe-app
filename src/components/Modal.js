@@ -3,17 +3,12 @@ import { useGlobalContext } from "../context";
 
 const Modal = () => {
   const { selectedMeal, closeModal } = useGlobalContext();
-  const {
-    idMeal: id,
-    strMeal: name,
-    strMealThumb: image,
-    strInstructions,
-  } = selectedMeal;
+  const { strMeal: name, strMealThumb: image, strInstructions } = selectedMeal;
 
   return (
     <div className="modal-overlay">
       <div className="modal-content">
-        <img className="modal-img" src={image} />
+        <img className="modal-img" src={image} alt="food" />
         <div className="modal-info">
           <h2>{name}</h2>
           <p>{strInstructions}</p>

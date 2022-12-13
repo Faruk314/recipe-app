@@ -7,7 +7,6 @@ const Meals = () => {
     isLoading,
     selectMeal,
     addMealToFavorites,
-    favorites,
   } = useGlobalContext();
 
   return (
